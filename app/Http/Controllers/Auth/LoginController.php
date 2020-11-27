@@ -33,10 +33,6 @@ class LoginController extends Controller
      *
      * @return void
      */
-    protected function redirectTo()
-    {
-        return route('profile', auth()->user()->name);
-    }
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
